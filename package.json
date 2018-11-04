@@ -1,0 +1,22 @@
+{
+  "name": "pairing-system-",
+  "version": "1.0.0",
+  "description": "It is build a web application that called the ​ Pairing System​​, the main purpose is to match the students as pairs for each sprint ​ randomly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdullatifJamous891/Pairing-System-.git"
+  },
+  "author": "Abdullaif Jamous",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdullatifJamous891/Pairing-System-/issues"
+  },
+  "homepage": "https://github.com/AbdullatifJamous891/Pairing-System-#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
