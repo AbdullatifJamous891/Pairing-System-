@@ -1,10 +1,16 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 const appRouter = require('./routes/appRoutes');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/pairingSystem', { useNewUrlParser: true });
+
+app.use(bodyParser.urlencoded({ extended:true }));
+app.use(bodyParser.json());
 
 app.use('/', appRouter);
-
 
 
 app.listen(port, ()=> {
