@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
     component: MainComponent
   },
   { path: 'AddStudent',
-    component: AddStudentComponent
+    component: AddStudentComponent,
+    runGuardsAndResolvers: 'always'
   },
   { path: 'Pairing',
     component: PairingComponent
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    RouterModule.forRoot(appRoutes, {onSameUrlNavigation: 'reload'})
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]
